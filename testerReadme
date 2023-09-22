@@ -1,0 +1,23 @@
+eth_getStorageAt() returns the value from a storage position at a given address.
+For example: on sending this request on sepolia testnet, 
+curl https://sepolia.infura.io/v3/197cf23745d64339aea08f173a24eb76 \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0",
+"method":"eth_getStorageAt",
+"params": [
+"0x295a70b2de5e3953354a6a8344e616ed314d7251", 
+"0x0",
+"latest"
+],
+"id":1
+}'
+
+The response is as given below.
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+}
+
+Implying that 
